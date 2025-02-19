@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lopez Hernández ─ Epistemología</title>
+  <style>
+    body {
+      background-color: #e74c3c; /* Rojo agradable */
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      color: #3458eb;
+      margin: 0;
+      padding: 0;
+    }
+    /* Título grande con efecto de desplazamiento */
+    h1 {
+      font-size: 4em;
+      margin: 50px 0 20px 0;
+    }
+    /* Subtítulo de tamaño mediano */
+    h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+    /* Estilos para los hipervínculos */
+    nav a {
+      text-decoration: none;
+      color: #6b34eb;
+      font-size: 1.5em;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f1c40f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Título con efecto de desplazamiento -->
+  <marquee behavior="scroll" direction="left">
+    <h1>Epistemología</h1>
+  </marquee>
+  
+  <!-- Subtítulo que mostrará conceptos relacionados a la epistemología -->
+  <h2 id="subtitle">Explorando el Conocimiento</h2>
+
+  <div class="imagen-container">
+    <img src="ultra.jpg" style="width:300px;">
+<p>
+    <audio src="ultra.mp3" controls autoplay></audio>
+
+    <p>
+  
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="tareas.html">Ultra Tareas</a>
+    <a href="datos.html">Mas Información</a>
+  </nav>
+  
+  <!-- Script para cambiar el subtítulo dinámicamente -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const subtitulos = [
+        "Explorando el Conocimiento",
+        "Reflexiones sobre la Verdad",
+        "Teoría del Conocimiento",
+        "Filosofía y Paradigmas",
+        "Razonamiento Crítico"
+      ];
+      
+      let indice = 0;
+      const subtituloElemento = document.getElementById("subtitle");
+      
+      setInterval(() => {
+        indice = (indice + 1) % subtitulos.length;
+        subtituloElemento.textContent = subtitulos[indice];
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
